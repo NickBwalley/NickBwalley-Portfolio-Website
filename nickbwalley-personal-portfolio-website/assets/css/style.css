@@ -305,7 +305,7 @@ body {
 }
 
 .navbar-link {
-  color: var(--black);
+  color: var(--white);
   font-family: var(--ff-barlow);
   padding-block: 3px;
   transition: var(--transition-1);
@@ -543,7 +543,7 @@ body {
 }
 
 .contact-input {
-  background-color: var(--white);
+  background-color: var(--black);
   color: var(--manatee);
   border-radius: var(--radius-5);
   padding: 15px 25px;
@@ -563,7 +563,7 @@ textarea.contact-input {
 }
 
 .btn-submit {
-  background-color: var(--orange-soda);
+  background-color: var(--bluetiful);
   color: var(--white);
   font-family: var(--ff-barlow);
   font-size: var(--fs-5);
@@ -574,7 +574,7 @@ textarea.contact-input {
 }
 
 .btn-submit:is(:hover, :focus) {
-  background-color: var(--white);
+  background-color: var(--orange-soda);
   color: var(--black);
 }
 
