@@ -778,6 +778,8 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
 
+    <!-- SENDS ME AN EMAIL WHEN USER ENTERS HIS MESSAGE -->
+
     <script>
       document
         .getElementById("contact-form")
@@ -814,6 +816,15 @@
           // Clear the form fields
           document.getElementById("contact-form").reset();
         });
+    </script>
+
+    <!-- DOWNLOAD MY CV WHEN BUTTON IS CLICKED -->
+    <script>
+      var downloadButton = document.getElementById("cv-download-button");
+      downloadButton.addEventListener("click", function (event) {
+        // Track additional actions or perform other logic here if needed
+        console.log("CV download button clicked");
+      });
     </script>
   </body>
 </html>
