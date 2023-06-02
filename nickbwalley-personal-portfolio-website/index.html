@@ -25,6 +25,19 @@
       href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Open+Sans:wght@400;500;700&family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
+
+    <!-- EmailJS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init("d0tADithy-mY5w214");
+      })();
+    </script>
   </head>
 
   <body id="top">
@@ -498,10 +511,11 @@
               <h2 class="h2 section-title">Hit me up. Say something...</h2>
 
               <div class="wrapper">
-                <form action="" class="contact-form">
+                <form id="contact-form" action="" class="contact-form">
                   <input
                     type="text"
                     name="name"
+                    id="name"
                     placeholder="Name"
                     required
                     class="contact-input"
@@ -510,6 +524,7 @@
                   <input
                     type="email"
                     name="email"
+                    id="email"
                     placeholder="Email"
                     required
                     class="contact-input"
@@ -518,6 +533,7 @@
                   <textarea
                     name="message"
                     placeholder="Message"
+                    id="message"
                     required
                     class="contact-input"
                   ></textarea>
@@ -760,5 +776,43 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+
+    <script>
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the default form behavior
+
+          // Get the user input values
+          var name = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+          var message = document.getElementById("message").value;
+
+          // Send the email using EmailJS
+          emailjs
+            .send("service_0777kv7", "template_vrnxpdh", {
+              name: name,
+              email: email,
+              message: message,
+            })
+            .then(
+              function (response) {
+                console.log(
+                  "Email sent successfully!",
+                  response.status,
+                  response.text
+                );
+                alert("Message sent successfully!");
+              },
+              function (error) {
+                console.log("Failed to send email.", error);
+                alert("Failed to send the message. Please try again.");
+              }
+            );
+
+          // Clear the form fields
+          document.getElementById("contact-form").reset();
+        });
+    </script>
   </body>
 </html>

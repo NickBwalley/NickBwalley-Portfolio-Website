@@ -269,7 +269,7 @@ body {
 }
 
 .logo {
-  color: var(--black);
+  color: var(--white);
   font-family: var(--ff-poppins);
   font-size: 2.4rem;
 }
@@ -563,7 +563,7 @@ textarea.contact-input {
 }
 
 .btn-submit {
-  background-color: var(--bluetiful);
+  background-color: var(--orange-soda);
   color: var(--white);
   font-family: var(--ff-barlow);
   font-size: var(--fs-5);
