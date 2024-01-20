@@ -792,6 +792,8 @@
           &copy; 2024 <a href="#" class="copyright-link">nickbwalley</a>. All
           Rights Reserved
         </p>
+        <p>Visit Counts: <span id="visitCount">0</span> times.</p>
+
 
         <ul class="footer-list">
           <li>
@@ -875,6 +877,37 @@
         // Track additional actions or perform other logic here if needed
         console.log("CV download button clicked");
       });
+    </script>
+
+    <!-- THE NUMBER OF TIMES THAT THIS WEBSITE HAS BEEN VISITED -->
+    <script>
+      // Function to update and display the visit count
+      function updateVisitCount() {
+        // Check if localStorage is supported
+        if (typeof(Storage) !== "undefined") {
+          // Retrieve the current visit count from localStorage
+          var count = localStorage.getItem("visitCount");
+  
+          // If count is not set, initialize it to 0
+          if (count === null) {
+            count = 0;
+          }
+  
+          // Increment the visit count
+          count++;
+  
+          // Update the visit count in localStorage
+          localStorage.setItem("visitCount", count);
+  
+          // Display the updated visit count on the page
+          document.getElementById("visitCount").textContent = count;
+        } else {
+          console.log("LocalStorage is not supported. Unable to track visits.");
+        }
+      }
+  
+      // Call the function when the page loads
+      updateVisitCount();
     </script>
   </body>
 </html>
