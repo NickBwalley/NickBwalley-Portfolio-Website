@@ -90,7 +90,7 @@
 
             <li>
               <a
-                href="./assets/resume/nickbwalley-cv/NicholasBwalley-InfoTech-CV-202401120946.pdf"
+                href="./assets/resume/nickbwalley-cv/NicholasBwalley-InfoTech-CV-202402061319.pdf"
                 id="cv-download-button"
                 target="_blank"
                 class="btn btn-primary"
@@ -148,12 +148,16 @@
             <div class="hero-content">
               <h2 class="hero-title">
                 <span>Hey there, I'm</span>
-                <strong>Nick Bwalley.</strong>A seasoned Full Stack Software Engineer and Cybersecurity professional
+                <strong>Nick Bwalley.</strong>A seasoned Full Stack Software
+                Engineer and Cybersecurity professional
               </h2>
 
               <p class="hero-text">
-                based in Nairobi, Kenya, backed by 2 years of extensive experience. My expertise spans both the IT and cybersecurity domains, showcasing a robust skill set. As a polyglot, I have honed my communication skills in various languages, enabling me to collaborate effectively within diverse teams.
-                
+                based in Nairobi, Kenya, backed by 2 years of extensive
+                experience. My expertise spans both the IT and cybersecurity
+                domains, showcasing a robust skill set. As a polyglot, I have
+                honed my communication skills in various languages, enabling me
+                to collaborate effectively within diverse teams.
               </p>
 
               <div class="btn-group">
@@ -206,11 +210,11 @@
             </figure>
 
             <div class="about-content">
-              <p class="section-subtitle">Full Stack Software Engineer | Cyber Security Analyst</p>
+              <p class="section-subtitle">
+                Full Stack Software Engineer | Cyber Security Analyst
+              </p>
 
-              <h2 class="h2 section-title">
-                Software Engineer 
-              </h2>
+              <h2 class="h2 section-title">Software Engineer</h2>
 
               <p class="section-text">
                 I am passionate in creating robust and efficient web
@@ -222,15 +226,15 @@
               </p>
 
               <p class="section-text">
-                In addition, I'm also a polyglot having honed my skills and achieved fluency in:
-                English, Swahili, French and currently learning Spanish, I'm
-                also conversant with multiple programming languages, allowing me
-                to adapt and excel in diverse development environments. With a
-                strong foundation in both front-end and back-end technologies. I
-                bring a holistic approach to building scalable and secure
-                software solutions. Explore my portfolio to see some of my
-                exciting projects and feel free to reach out to discuss
-                potential collaborations.
+                In addition, I'm also a polyglot having honed my skills and
+                achieved fluency in: English, Swahili, French and currently
+                learning Spanish, I'm also conversant with multiple programming
+                languages, allowing me to adapt and excel in diverse development
+                environments. With a strong foundation in both front-end and
+                back-end technologies. I bring a holistic approach to building
+                scalable and secure software solutions. Explore my portfolio to
+                see some of my exciting projects and feel free to reach out to
+                discuss potential collaborations.
               </p>
 
               <a href="#portfolio" class="btn btn-primary blue"
@@ -794,14 +798,15 @@
         </p>
         <p>Visit Counts: <span id="visitCount">0</span> times.</p>
 
-
         <ul class="footer-list">
           <li>
             <a href="#" class="footer-link">Terms & Condition</a>
           </li>
 
           <li>
-            <a href="https://forms.gle/8rAecqVhtVNeu3Bz9" class="footer-link">Privacy Policy</a>
+            <a href="https://forms.gle/8rAecqVhtVNeu3Bz9" class="footer-link"
+              >Privacy Policy</a
+            >
           </li>
         </ul>
       </div>
@@ -884,28 +889,28 @@
       // Function to update and display the visit count
       function updateVisitCount() {
         // Check if localStorage is supported
-        if (typeof(Storage) !== "undefined") {
+        if (typeof Storage !== "undefined") {
           // Retrieve the current visit count from localStorage
           var count = localStorage.getItem("visitCount");
-  
+
           // If count is not set, initialize it to 0
           if (count === null) {
             count = 0;
           }
-  
+
           // Increment the visit count
           count++;
-  
+
           // Update the visit count in localStorage
           localStorage.setItem("visitCount", count);
-  
+
           // Display the updated visit count on the page
           document.getElementById("visitCount").textContent = count;
         } else {
           console.log("LocalStorage is not supported. Unable to track visits.");
         }
       }
-  
+
       // Call the function when the page loads
       updateVisitCount();
     </script>
